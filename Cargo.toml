@@ -1,0 +1,24 @@
+[package]
+name = "wasm-pentagram"
+version = "0.1.0"
+authors = ["Topi Kettunen <topi@kettunen.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.20"
+wasm-bindgen = "0.2.43"
+console_error_panic_hook = { version = "0.1.1", optional = true }
+wee_alloc = { version = "0.4.2", optional = true }
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'CanvasRenderingContext2d',
+  'Document',
+  'Element',
+  'HtmlCanvasElement',
+  'Window',
+]
